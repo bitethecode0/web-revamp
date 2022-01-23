@@ -1,46 +1,46 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
 import './Navbar.css';
+import { IconContext } from 'react-icons';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
 
-const MenuItems = [
-  { 
-    'name': 'Home', 
-    'url': '#',
-    'cName': 'nav-link'
-  },
-  { 
-    'name': 'Projects',
-    'url': '#',
-    'cName': 'nav-link'
-  },
-  { 
-    'name': 'Articles',
-    'url': '#',
-    'cName': 'nav-link'
-  },
-];
 
-export default class Navbar extends Component {
-  state = { clicked : false }
+export default function Navbar() {
 
-  handleClick = () => {
-    this.setState({ clicked : !this.state.clicked });
-  }
+  const [sidebar, setSidebar] = useState(false);
 
-  render() {
-    return (
-      <nav className="navbar-items">
-        <h1 className="navbar-logo"><i className="fab fa-react"></i></h1>
-        <div className="menu-icon" onClick={this.handleClick}>
-          <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+  const showSidebar = () => setSidebar(!sidebar);
+  
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff'}}>
+        <div className='navbar'>
+          <Link to='#' className='menu-bars'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </Link>
         </div>
-        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-          { MenuItems.map((item, index) => {
-            return (
-              <li key={index}><a className={item.cName} href={item.url}>{item.name}</a></li>
-            )
-          })}
-        </ul>
-      </nav>
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <ul className='nav-menu-items' onClick={showSidebar}>
+            <li className='navbar-toggle'>
+              <Link to='#' className='menu-bars'>
+                <AiIcons.AiOutlineClose />
+              </Link>
+            </li>
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
     )
-  }
 }

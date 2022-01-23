@@ -1,77 +1,72 @@
-.navbar-logo {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
+.navbar {
+  background-color: #060b26;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-.navbar-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
 }
 
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    list-style: none;
-    text-align: center;
-    width: 70vw;
-    justify-content: end;
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
 }
 
-.nav-link {
-    padding-right: 3em;
-    text-decoration: none;
-    padding: .8rem; 
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
 }
 
-.nav-link:hover {
-    background-color: lightgrey;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
 }
 
-.menu-icon{
-    display: none;
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
 }
 
-@media screen and (max-width: 960px) {
-    .navbar-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(50%, -25%);
-        cursor: pointer;
-    }
-    
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        top: 80px;
-        position: absolute;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.4s ease;
-    }
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
 
-    .nav-menu.active {
-        padding-inline-start: 0px;
-        left: 0;
-        opacity: 1;
-        transition: all 0.4s ease;
-    }
+.nav-menu-items {
+  width: 100%;
+}
 
-    .nav-link {
-        display: block;
-    }
+.navbar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
+span {
+  margin-left: 16px;
 }
