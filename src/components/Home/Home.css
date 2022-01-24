@@ -1,0 +1,29 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding: 1rem; */
+}
+
+.bio {
+    padding: 2rem;
+}
+
+.profile {
+    width: 40vw;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 4em;
+}
+
+@media screen and (max-width: 960px) {
+    .content-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profile {
+        width: 60vw;
+    }
+}
