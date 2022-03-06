@@ -1,0 +1,12 @@
+.project {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-image {
+    width: 85vw;
+    height: auto;
+    border-radius: 1em;
+}

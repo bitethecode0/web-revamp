@@ -25,7 +25,6 @@ export default function AllPosts() {
  
   return (
     <div>
-      <h2>Blog Posts</h2>
       <div className="blog-container">
         {allPostsData &&
           allPostsData.map((post, index) => (
