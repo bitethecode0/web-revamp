@@ -1,12 +1,8 @@
-.content-wrapper {
+.summary {
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* padding: 1rem; */
-}
-
-.bio {
-    padding: 2rem;
 }
 
 .profile {
@@ -16,14 +12,67 @@
     border-radius: 4em;
 }
 
+.info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.connect {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
 @media screen and (max-width: 960px) {
-    .content-wrapper {
+    .summary {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        /* align-items: center; */
     }
-
     .profile {
         width: 60vw;
     }
+}
+
+.underlined {
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: #E59400;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: .2rem;
+}
+
+.info li::before {
+    display: inline-block;
+    width: 1rem;
+    content: "•";
+    color: #E59400;
+    font-size: 1.5rem;
+}
+
+.connect a {
+    text-decoration: none;
+}
+
+.connect ul {
+    list-style-type: none;
+    padding: .2rem;
+}
+
+.connect li:not(:last-child) {
+    margin-bottom: 0.5rem;
 }

@@ -1,0 +1,42 @@
+.exp {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp ul {
+    list-style-type: none;
+    padding: .2rem;
+}
+
+.exp li::before {
+    display: inline-block;
+    width: 1rem;
+    content: "•";
+    color: #E59400;
+    font-size: 1.5rem;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.work brand-logo {
+    width: 40vw;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 4em;
+}
+
+.brand-logo {
+    border-radius: .5em;
+}
+
+.journey {
+    width: 80vw;
+    height: auto;
+    border-radius: .5em;
+}

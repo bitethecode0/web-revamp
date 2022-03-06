@@ -10,6 +10,12 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Experience',
+    path: '/experience',
+    icon: <AiIcons.AiTwotoneTrophy/>,
+    cName: 'nav-text'
+  },
+  {
     title: 'Projects',
     path: '/projects',
     icon: <IoIcons.IoIosStar />,
