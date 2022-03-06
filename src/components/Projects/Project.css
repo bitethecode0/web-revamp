@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+.project-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .project-image {
     width: 85vw;
     height: auto;

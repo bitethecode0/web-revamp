@@ -8,7 +8,9 @@ const ProjectCard = () => {
     const render = (card, index) => {
         return (
             <div className="project">
-                <img alt="profile pic" src={require(`../../images/${card.image}`)} className="project-image" />
+                <div className="project-image-wrapper">
+                    <img alt="profile pic" src={require(`../../images/${card.image}`)} className="project-image" />
+                </div>
                 <div>
                     <br/>
                     <h1>{card.title}</h1>
